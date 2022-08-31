@@ -1,0 +1,71 @@
+<div class="conteiner-fluid d-flex flex-row m-4">
+  <div>
+    <div class="col">
+      <div class="btn-group">
+        <a>Zmian do czyszczenia: </a>
+        <div class="dropdown mb-3">
+          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Zmian do czyszczenia
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" (click)="onSelectFilter(null)" style="cursor: pointer">Wszystkie kalibratory</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="onSelectFilter(1)" style="cursor: pointer">Od 0 do 3</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="onSelectFilter(2)" style="cursor: pointer">Od 4 do 10</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="onSelectFilter(3)" style="cursor: pointer">Powyżej 10</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-primary h-25 btn-sm" style="font-weight: bold" (click)="showSuma()">
+          Σ
+        </button>
+      </div>
+    </div>
+    <div class="table-wrapper">
+      <div style="min-width: 1050px; max-height: 750px; max-width: 1050px; max-height: 750px;">
+        <table class="table table-striped table-hover" style="overflow: scroll;">
+          <thead style="background-color: rgb(243, 243, 243);">
+            <tr>
+              <td>Nieaktywne</td>
+              <td>Kalibrator</td>
+              <td>Opis</td>
+              <td>Sztuk na zmianę</td>
+              <td>Zm</td>
+              <td>Co ile czyszczenie</td>
+              <td>Data od ostatniego czyszczenia</td>
+              <td>Ilość sztuk od kons.</td>
+              <td>Całkowita ilość sztuk w roku</td>
+              <td *ngIf="isHidden == false">Σ sztuki</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let kalibrator of filteredKalibratory" (click)="onSelectRow(kalibrator)" style="cursor: pointer"
+              tabindex="0">
+              <td style="cursor:default"> <input type="checkbox">{{ kalibrator?.nieakt }}</td>
+              <td> {{ kalibrator?.matnr }}</td>
+              <td>{{ kalibrator?.maktx }}</td>
+              <td>{{ kalibrator?.stnzm }}</td>
+              <td>{{ kalibrator?.zmian }}</td>
+              <td>{{ kalibrator?.czyil }}</td>
+              <td>{{ kalibrator?.datac }}</td>
+              <td>{{ kalibrator?.wykOdCzyszcz }}</td>
+              <td>{{ kalibrator?.wykCalkowiteRok }}</td>
+              <td *ngIf="isHidden == false">{{ kalibrator?.wykCalkowite }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <app-szczegoly-czyszczenia [kalibratoryElement]="kalibratoryElement" [kalibratorySzczegoly]="kalibratorySzczegoly">
+    </app-szczegoly-czyszczenia>
+  </div>
+</div>

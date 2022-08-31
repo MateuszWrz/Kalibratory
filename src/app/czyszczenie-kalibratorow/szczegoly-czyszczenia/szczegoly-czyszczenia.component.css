@@ -1,0 +1,42 @@
+.container-fluid {
+  line-height: 1;
+  margin-top: 50px;
+}
+h4 {
+  font-weight: bold;
+}
+input {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto;
+  font-weight: bold;
+}
+
+.kalibratory-pozycje {
+  width: 700px;
+  min-height: 527px;
+  max-height: 527px;
+}
+td {
+  border: 1px solid rgb(180, 180, 180);
+  line-height: 1;
+}
+input {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 2px 2px 2px 2px;
+  width: auto;
+}
+
+.table-wrapper {
+  height: 528px;
+  border: solid 1px rgb(206, 206, 206);
+}
+table {
+  border-top: hidden;
+  border-left: hidden;
+}
+thead {
+  position: sticky;
+  top: 0;
+}

@@ -1,0 +1,69 @@
+.conteiner-fluid {
+  font-size: smaller;
+  line-height: 1;
+}
+
+td {
+  border: 1px solid rgb(180, 180, 180);
+  line-height: 1;
+}
+.btn,
+a {
+  font-size: small;
+}
+
+select {
+  width: auto;
+  margin-right: 30px;
+}
+a {
+  margin-top: 9px;
+  margin-right: 15px;
+}
+h4,
+p {
+  margin-left: 30px;
+}
+.dropdown {
+  margin-right: 30px;
+}
+.dropdown-item {
+  margin: auto;
+}
+table tr:focus {
+  background-color: rgba(206, 206, 206, 0.63);
+  transition: 0.3s;
+}
+.table-wrapper {
+  border: 1px solid rgb(180, 180, 180);
+  height: 752px;
+}
+table {
+  border-left: hidden;
+  border-top: hidden;
+}
+
+thead {
+  table-layout: fixed;
+  position: sticky;
+  top: 0;
+  display: table-header-group;
+}
+thead tr {
+  width: calc(100%-1em);
+  border-top: hidden;
+  border-left: hidden;
+}
+tbody {
+  display: block;
+  height: 687px;
+  overflow: auto;
+}
+
+thead,
+tbody tr {
+  display: table-row;
+  border-top: hidden;
+  border-left: hidden;
+  width: 100%;
+}

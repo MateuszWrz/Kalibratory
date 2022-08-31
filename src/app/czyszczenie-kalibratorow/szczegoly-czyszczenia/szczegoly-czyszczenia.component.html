@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div>
+    <p>Kalibrator: <input [(ngModel)]="kalibratoryElement.matnr"> <input [(ngModel)]="kalibratoryElement.maktx"
+        style="width:300px"></p>
+    <p>Data ostatniego czyszczenia: <input [(ngModel)]="kalibratoryElement.datac"> Zmiana: <input
+        [(ngModel)]="kalibratoryElement.zmiana"></p>
+    <p>Ilość sztuk od ostatniego czyszczenia: <input [(ngModel)]="kalibratoryElement.wykOdCzyszcz"> </p>
+    <p>Co ile czyszczenie: <input [(ngModel)]="kalibratoryElement.czyil"> Pozostało zmian do czyszczenia: <input
+        [(ngModel)]="kalibratoryElement.zmian"></p>
+    <p>Całkowita ilość sztuk w roku: <input [(ngModel)]="kalibratoryElement.wykCalkowiteRok"></p>
+    <p>Max. dop. ilość sztuk po pozytywnej ocenie KJ: <input [(ngModel)]="kalibratoryElement.dopIlosc"></p>
+    <h4>Szczegóły czyszczenia</h4>
+  </div>
+  <div class="table-wrapper">
+    <div class="kalibratory-pozycje" style="overflow-y: auto ;min-width: 800px; max-width: 800px;">
+      <table class="table table-striped table-hover">
+        <thead style="background-color: rgb(243, 243, 243);">
+          <tr>
+            <td>Kalibrator</td>
+            <td>Sposób konserwacji</td>
+            <td>Od daty</td>
+            <td>Data konserwacji</td>
+            <td>Ilość sztuk od konserwacji</td>
+            <td>Osoba czyszcząca</td>
+            <td>Zmiana</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let kalibratorSzczegoly of kalibratorySzczegoly">
+            <td>{{kalibratorSzczegoly?.matnr}}</td>
+            <td>{{kalibratorSzczegoly?.czyszczenie}}</td>
+            <td>{{kalibratorSzczegoly?.datao}}</td>
+            <td>{{kalibratorSzczegoly?.datad}}</td>
+            <td>{{kalibratorSzczegoly?.uzysk}}</td>
+            <td>{{kalibratorSzczegoly?.osoba}}</td>
+            <td>{{kalibratorSzczegoly?.zmiana}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
