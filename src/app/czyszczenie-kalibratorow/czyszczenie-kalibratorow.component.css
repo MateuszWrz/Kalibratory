@@ -67,3 +67,7 @@ tbody tr {
   border-left: hidden;
   width: 100%;
 }
+
+thead {
+  background-color: aqua;
+}
