@@ -30,13 +30,22 @@ input {
 
 .table-wrapper {
   height: 528px;
-  border: solid 1px rgb(206, 206, 206);
+  border: solid 1px rgb(180, 180, 180);
 }
 table {
+  display: block;
+  overflow-y: scroll;
   border-top: hidden;
   border-left: hidden;
+  height: 526px;
 }
 thead {
   position: sticky;
   top: 0;
+  border-top: hidden;
+  border-left: hidden;
+}
+tbody tr {
+  border-bottom: hidden;
+  border-left: hidden;
 }

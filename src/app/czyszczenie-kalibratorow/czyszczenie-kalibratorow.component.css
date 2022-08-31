@@ -1,3 +1,4 @@
+/*#region button, select etc. style */
 .conteiner-fluid {
   font-size: smaller;
   line-height: 1;
@@ -13,7 +14,6 @@ a {
 }
 
 select {
-  width: auto;
   margin-right: 30px;
 }
 a {
@@ -30,8 +30,9 @@ p {
 .dropdown-item {
   margin: auto;
 }
+/*#endregion*/
 table tr:focus {
-  background-color: rgba(206, 206, 206, 0.63);
+  background: rgba(206, 206, 206, 0.63);
   transition: 0.3s;
 }
 .table-wrapper {
@@ -39,35 +40,23 @@ table tr:focus {
   height: 752px;
 }
 table {
+  display: block;
+  overflow-y: scroll;
   border-left: hidden;
-  border-top: hidden;
+  height: 750px;
 }
 
 thead {
-  table-layout: fixed;
   position: sticky;
   top: 0;
-  display: table-header-group;
-}
-thead tr {
-  width: calc(100%-1em);
-  border-top: hidden;
-  border-left: hidden;
-}
-tbody {
-  display: block;
-  height: 687px;
-  overflow: auto;
-}
-
-thead,
-tbody tr {
-  display: table-row;
   border-top: hidden;
   border-left: hidden;
   width: 100%;
+  overflow-x: hidden;
+  background-color: rgb(243, 243, 243);
 }
 
-thead {
-  background-color: aqua;
+tbody tr {
+  border-left: hidden;
+  border-bottom: hidden;
 }
