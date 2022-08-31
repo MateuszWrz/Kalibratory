@@ -12,6 +12,7 @@ import { KalibratorySzczegoly } from '../models/kalibratory-szczegoly';
 })
 export class CzyszczenieKalibratorowComponent implements OnInit {
   isHidden = true;
+  isActive = true;
   kalibratory: Kalibratory[];
   filteredKalibratory: Kalibratory[];
   kalibratorySzczegoly: KalibratorySzczegoly[];
@@ -53,8 +54,11 @@ export class CzyszczenieKalibratorowComponent implements OnInit {
       });
     });
   }
-
   showSuma() {
     this.isHidden = !this.isHidden;
+  }
+
+  isDisable() {
+    this.isActive = !this.isActive;
   }
 }

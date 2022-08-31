@@ -35,7 +35,7 @@
             <tr>
               <td>Nieaktywne</td>
               <td>Kalibrator</td>
-              <td style="min-width:177px ;">Opis</td>
+              <td style="min-width:177px">Opis</td>
               <td>Sztuk na zmianę</td>
               <td>Zm</td>
               <td>Co ile czyszczenie</td>
@@ -46,18 +46,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let kalibrator of filteredKalibratory" (click)="onSelectRow(kalibrator)" style="cursor: pointer"
-              tabindex="0">
-              <td style="cursor:default"> <input type="checkbox">{{ kalibrator?.nieakt }}</td>
-              <td> {{ kalibrator?.matnr }}</td>
-              <td>{{ kalibrator?.maktx }}</td>
-              <td>{{ kalibrator?.stnzm }}</td>
-              <td>{{ kalibrator?.zmian }}</td>
-              <td>{{ kalibrator?.czyil }}</td>
-              <td>{{ kalibrator?.datac }}</td>
-              <td>{{ kalibrator?.wykOdCzyszcz }}</td>
-              <td>{{ kalibrator?.wykCalkowiteRok }}</td>
-              <td *ngIf="isHidden == false">{{ kalibrator?.wykCalkowite }}</td>
+            <tr *ngFor="let kalibrator of filteredKalibratory" tabindex="0">
+              <td *ngIf="isActive == true" style="cursor:default"> <input type="checkbox" (click)="isDisable()">{{
+                kalibrator?.nieakt }}
+              </td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.matnr }}</td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.maktx }}</td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.stnzm }}</td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.zmian }}</td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.czyil }}</td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.datac }}</td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.wykOdCzyszcz }}</td>
+              <td (click)="onSelectRow(kalibrator)">{{ kalibrator?.wykCalkowiteRok }}</td>
+              <td (click)="onSelectRow(kalibrator)" *ngIf="isHidden == false">{{ kalibrator?.wykCalkowite }}</td>
             </tr>
           </tbody>
         </table>
