@@ -1,4 +1,4 @@
-/*#region button, select etc. style */
+/*#region button, select, font etc. style */
 .conteiner-fluid {
   font-size: smaller;
   line-height: 1;
@@ -6,7 +6,6 @@
 
 td {
   border: 1px solid rgb(180, 180, 180);
-  line-height: 1;
 }
 .btn,
 a {
@@ -31,19 +30,22 @@ p {
   margin: auto;
 }
 /*#endregion*/
+
+/*#region table styles  */
+
 table tr:focus {
   background: rgba(206, 206, 206, 0.63);
   transition: 0.3s;
 }
 .table-wrapper {
   border: 1px solid rgb(180, 180, 180);
-  height: 752px;
+  height: 774px;
 }
 table {
   display: block;
   overflow-y: scroll;
   border-left: hidden;
-  height: 750px;
+  height: 772px;
 }
 
 thead {
@@ -52,7 +54,6 @@ thead {
   border-top: hidden;
   border-left: hidden;
   width: 100%;
-  overflow-x: hidden;
   background-color: rgb(243, 243, 243);
 }
 
@@ -60,3 +61,7 @@ tbody tr {
   border-left: hidden;
   border-bottom: hidden;
 }
+tbody input {
+  margin-left: 23px;
+}
+/*#endregion*/
